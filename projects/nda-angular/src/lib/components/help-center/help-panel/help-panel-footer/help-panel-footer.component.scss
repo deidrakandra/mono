@@ -1,0 +1,10 @@
+@import "../../../../../../../nda-ui/scss/helpers/colors";
+
+.help-footer {
+  line-height: 2;
+  margin-top: 15px;
+  padding: 5px;
+  border-top: 1px solid $color-help-border;
+  text-align: center;
+  font-size: .85em;
+}

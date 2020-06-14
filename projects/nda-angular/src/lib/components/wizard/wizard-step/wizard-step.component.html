@@ -1,0 +1,17 @@
+<div class="step-container" [class.active]="state.active" [class.complete]="state.complete" [class.final]="final">
+    <div class="step">
+        <div class="step-icon">
+            <i *ngIf="isIcon(); else img" class="fa fa-{{ state.icon }}"></i>
+        </div>
+        <div class="step-title">{{ title }}</div>
+    </div>
+    <div *ngIf="!final" class="step-connector">
+        <svg attr.width="{{ connectorWidth }}px" height="55px" attr.viewBox="0 0 {{ connectorWidth }} 55">
+            <line x1="3" attr.x2="{{ connectorWidth }}" y1="3" y2="3" stroke-width="3" stroke-linecap="round"></line>
+        </svg>
+    </div>
+</div>
+
+<ng-template #img>
+    <img src="{{ state.icon }}">
+</ng-template>

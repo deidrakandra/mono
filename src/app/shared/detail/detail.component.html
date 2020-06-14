@@ -1,0 +1,24 @@
+<div>
+    <h3>{{ type }}: {{ config.title }}</h3>
+    <section class="component">
+        <ng-template [nda-component-host]="component"></ng-template>
+    </section>
+</div>
+
+<ng-container *ngIf="config.notes; else patternNotes">
+    <div>
+        <h3>Usage Notes</h3>
+        <section class="documentation">
+            <sg-usage-notes [note]="config.notes"></sg-usage-notes>
+        </section>
+    </div>
+</ng-container>
+
+<ng-template #patternNotes>
+    <div>
+        <h3>Pattern Notes</h3>
+        <section class="documentation">
+            <sg-pattern-note [note]="config.patternNotes"></sg-pattern-note>
+        </section>
+    </div>
+</ng-template>

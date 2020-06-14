@@ -1,0 +1,28 @@
+<div class="bottom-container">
+<footer>
+    <div class="footer-container">
+        <div class="link-container">
+            <h5>Additional Information</h5>
+            <ul data-test="additional">
+                <li *ngFor="let item of menuItems">
+                    <nda-link [link]="item" [target]="target"></nda-link>
+                </li>
+            </ul>
+        </div>
+        <div class="link-container">
+            <h5>External Resources</h5>
+            <ul data-test="external">
+                <li *ngFor="let item of externalMenuItems">
+                    <nda-link [link]="item" [target]="target"></nda-link>
+                </li>
+            </ul>
+        </div>
+        <div class="imgs-row center">
+            <a href="http://www.nih.gov/" target="_blank"><img class="lg-img" alt="NIH Logo" src="https://s3.amazonaws.com/validationtool-client/img/nihLogo.png"/></a>
+            <a href="http://www.hhs.gov/" target="_blank"><img class="sm-img" alt="HHS Logo" src="https://s3.amazonaws.com/validationtool-client/img/hhsLogo.png"/></a>
+            <a href="http://www.usa.gov/" target="_blank"><img class="md-img" alt="USA Gov Logo" src="https://s3.amazonaws.com/validationtool-client/img/usaGovLogo.png"/></a>
+            <span class="version">{{ version }}</span>
+        </div>
+    </div>
+</footer>
+</div>

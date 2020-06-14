@@ -1,0 +1,221 @@
+// buttons
+@import "../helpers/mixins";
+@import "../helpers/typography";
+
+$button-color: $color-cool-blue;
+$inverse-color: $color-white;
+$highlight-color: $color-cool-blue-light;
+$disabled-color: $color-gray-light;
+
+.disable-button {
+  color: $disabled-color;
+  background-color: transparent;
+}
+
+.disable-button-solid {
+  background-color: $disabled-color;
+  color: $color-white;
+  border-color: $disabled-color;
+}
+.disable-button-outline {
+  color: $disabled-color;
+  border-color: $disabled-color;
+}
+
+.base-button {
+  &:focus {
+    @include focus;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.base-flat-button {
+  @extend .base-button;
+  padding: 6px 16px;
+  text-transform: uppercase;
+  font-size: .9em;
+  transition: all .2s ease-in-out;
+  color: $button-color;
+  background-color: inherit;
+  border: none;
+  font-weight: bold;
+
+  &:hover {
+    color: $inverse-color;
+    background-color: $highlight-color;
+    border-radius: $border-radius;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button;
+  }
+}
+
+a.base-flat-button {
+  font-weight: bold;
+  border: none;
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button;
+  }
+
+}
+
+.flat-button {
+  @extend .base-flat-button;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.primary-button {
+  @extend .base-flat-button;
+  background-color: $button-color;
+  color: $inverse-color;
+  border: solid 2px transparent;
+  border-radius: $border-radius;
+
+  &:hover {
+    border: solid 2px $button-color;
+    color: $button-color;
+    background-color: transparent;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button-solid;
+  }
+
+}
+
+
+.outline-button {
+  @extend .base-flat-button;
+  border: solid 2px $highlight-color;
+  border-radius: $border-radius;
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button-outline;
+  }
+}
+
+.solid-button {
+  @extend .base-button;
+  background-color: $color-cool-blue-light;
+  color: $color-white;
+  border-radius: $border-radius;
+  border: none;
+  text-align: center;
+  padding: 7px 25px;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: lighten($color-cool-blue-light, 10%);
+    color: $color-white;
+    border-bottom: none !important;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button-solid;
+  }
+}
+
+.small-button {
+  @extend .solid-button;
+  padding: 3px;
+}
+
+.round-button {
+  @extend .base-button;
+  @include circle(40px);
+  background-color: $button-color;
+  color: $color-white;
+  border: none;
+  font-size: 1.2em;
+  font-weight: $font-bold;
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button-solid;
+  }
+}
+
+.round-button-shadow {
+  @extend .round-button;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+
+  &:hover {
+    @include shadow();
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button-solid;
+    box-shadow: none;
+  }
+}
+
+.round-button-outline {
+  @extend .round-button;
+  transition: all .3s ease;
+
+  &:hover {
+    border: solid 2px $button-color;
+    color: $button-color;
+    background-color: transparent;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    @extend .disable-button-solid;
+  }
+}
+
+
+
+/////////////////////
+//   NAV BUTTONS   //
+/////////////////////
+
+.nav-button {
+  @extend .base-flat-button;
+  color: $button-color;
+  border: none;
+  text-transform: none;
+
+  &:before {
+    font-weight: $font-bold;
+    padding-right: 5px;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    color: $inverse-color;
+    background-color: $highlight-color;
+    opacity: 1 !important;
+    border: none !important;
+  }
+}
+
+.nav-button-next {
+  @extend .nav-button;
+  &:before {
+    content: 'Next:';
+  }
+}
+
+.nav-button-prev {
+  @extend .nav-button;
+  &:before {
+    content: 'Previous:';
+  }
+}

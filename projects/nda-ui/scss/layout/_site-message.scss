@@ -1,0 +1,12 @@
+.site-message-container {
+  width: 100%;
+
+  .site-message {
+    background-color: $color-gold-lighter;
+    border-top: solid 1px $color-gold;
+    border-bottom: solid 1px $color-gold;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 30px 50px;
+  }
+}

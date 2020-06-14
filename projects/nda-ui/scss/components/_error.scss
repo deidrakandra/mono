@@ -1,0 +1,21 @@
+@import "../helpers/mixins";
+
+.page-error {
+  color: $color-secondary-dark;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 50%;
+  margin: 10px auto;
+}
+
+
+.validation-msg,
+.error-msg {
+  color: $color-secondary;
+  font-size: .7em;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-left: 0 !important;
+  padding-top: 3px;
+  text-align: left;
+}

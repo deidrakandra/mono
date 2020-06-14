@@ -1,0 +1,60 @@
+<div class="position-container">
+    <div #container [@fadeInOutFast] *ngIf="display" class="date-helper" (keyup.escape)="close()">
+        <div class="row header">
+            <ng-container [ngTemplateOutlet]="columnOneHeader"></ng-container>
+            <div class="col-tiny"></div>
+            <ng-container [ngTemplateOutlet]="columnTwoHeader"></ng-container>
+            <div class="col-tiny"></div>
+            <ng-container [ngTemplateOutlet]="columnThreeHeader"></ng-container>
+            <div class="col-tiny clickable right-align" (click)="close()">&times;</div>
+        </div>
+        <div class="row">
+            <ng-container [ngTemplateOutlet]="columnOneTemplate"></ng-container>
+            <div class="col-tiny"></div>
+            <ng-container [ngTemplateOutlet]="columnTwoTemplate"></ng-container>
+            <div class="col-tiny"></div>
+            <ng-container [ngTemplateOutlet]="columnThreeTemplate"></ng-container>
+            <div class="col-tiny"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 right-align">
+                <a class="link m-right-sm medium-font" (click)="close()">Cancel</a>
+                <button type="button" class="flat-button" (click)="clearAll()">Clear</button>
+                <button type="button" class="flat-button" (click)="onSelect()" [disabled]="!canSelect()">Select</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #dayHeaderTemplate>
+    <div class="col-3 p-left-sm">DAY</div>
+</ng-template>
+<ng-template #dayTemplate>
+    <div class="col-3">
+        <ul class="list-2col center">
+            <li *ngFor="let d of days" (click)="selectDay(d)" class="selectable" [class.selected]="d.selected" [class.disabled]="d.disabled">{{d.value}}</li>
+        </ul>
+    </div>
+</ng-template>
+
+<ng-template #monthHeaderTemplate>
+    <div class="col-3 p-left-xs">MONTH</div>
+</ng-template>
+<ng-template #monthTemplate>
+    <div class="col-3">
+        <ul class="list">
+            <li *ngFor="let m of months" (click)="selectMonth(m)" class="selectable" [class.selected]="m.selected">{{m.month}}</li>
+        </ul>
+    </div>
+</ng-template>
+
+<ng-template #yearHeaderTemplate>
+    <div class="col-4">YEAR</div>
+</ng-template>
+<ng-template #yearTemplate>
+    <div class="col-4">
+        <ul class="list-3col center">
+            <li *ngFor="let y of years" (click)="selectYear(y)" class="selectable" [class.selected]="y.selected">{{y.value}}</li>
+        </ul>
+    </div>
+</ng-template>

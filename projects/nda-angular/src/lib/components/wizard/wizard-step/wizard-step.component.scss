@@ -1,0 +1,96 @@
+@import "../../../../../../nda-ui/scss/helpers/colors";
+@import "../../../../../../nda-ui/scss/helpers/vars";
+@import "../../../../../../nda-ui/scss/helpers/mixins";
+
+$future: $color-gray-future;
+$active: $color-gray-dark;
+$complete: $color-green-complete;
+
+.step-container {
+  display: inline-block;
+  cursor: default;
+  min-width: 75px;
+
+  &.final {
+    min-width: 0;
+  }
+
+  .step {
+    display: inline-block;
+
+    .step-icon {
+      @include circle(60px);
+      border: 1px solid $future;
+      margin: 35px auto 10px;
+      padding: 10px;
+
+      i {
+        font-size: 2.1em;
+        line-height: 1.1;
+        color: $future;
+      }
+    }
+
+    .step-title {
+      color: $future;
+      text-align: center;
+      font-size: .8em;
+    }
+  }
+
+  .step-connector {
+    display: inline-block;
+    stroke: $future;
+    stroke-dasharray: 0, 10;
+    padding: 0 10px;
+  }
+
+  &:nth-of-type(4) {
+    .step-connector {
+      display: none;
+    }
+  }
+}
+
+.step-container.active {
+  .step {
+    .step-icon {
+      @include circle(70px);
+      border: 2px solid $active;
+      margin: 26px auto 5px;
+
+      i {
+        font-size: 2.5em;
+        line-height: 1.15;
+        color: $active;
+      }
+    }
+
+    .step-title {
+      color: $active;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
+}
+
+.step-container.complete {
+  .step {
+    .step-icon {
+      @include circle(75px);
+      margin-top: 20px;
+      border: none;
+      padding: 7px 0;
+    }
+
+    .step-title {
+      color: $complete;
+      font-style: italic;
+    }
+  }
+
+  .step-connector {
+    stroke: $complete;
+    stroke-dasharray: 0;
+  }
+}

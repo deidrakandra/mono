@@ -1,0 +1,95 @@
+
+.item-list {
+  .item {
+    padding: 7px 3px;
+
+    a {
+      color: $color-font;
+      border-bottom: dotted 1px $color-font;
+
+      &:hover {
+        border-bottom: solid 1px $color-font;
+        opacity: 1;
+      }
+    }
+
+    .item-info {
+      float: left;
+      color: $color-site-chart;
+      margin-right: .5em;
+
+      &:hover {
+        @include hoverAnchor();
+      }
+    }
+
+    .item-details {
+      float: left;
+      width: 95%;
+    }
+
+    .item-title {
+      display: inline-block;
+      font-weight: $font-bold;
+    }
+
+    .item-secondary {
+      font-size: .95em;
+      padding-top: 2px;
+      padding-bottom: 5px;
+
+      div {
+        padding-bottom: 3px;
+      }
+    }
+
+    .item-subtitle,
+    .item-subtitle-bold {
+      font-size: .85em;
+    }
+    .item-subtitle {
+      font-weight: $font-normal;
+    }
+    .item-subtitle-bold {
+      font-weight: $font-bold;
+    }
+
+    .separator {
+      padding: 0 10px;
+    }
+
+    .item-highlight {
+      color: $color-site-chart;
+    }
+  }
+
+  .chart-detail-panel {
+    margin-top: 5px;
+    margin-left: 15px;
+    z-index: $zindex-dialog;
+
+    .path {
+      text-align: center;
+    }
+
+    .body {
+      padding: 25px 40px;
+      line-height: 2em;
+      overflow-y: auto;
+    }
+
+    .header {
+      cursor: pointer;
+    }
+  }
+
+  .no-results {
+    font-style: italic;
+    padding: 7px 10px;
+  }
+}
+
+.tab-list {
+  height: 500px;
+  overflow-y: auto;
+}

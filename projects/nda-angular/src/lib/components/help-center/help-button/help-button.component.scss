@@ -1,0 +1,13 @@
+@import "../../../../../../nda-ui/scss/components/buttons";
+@import "../../../../../../nda-ui/scss/helpers/mixins";
+@import "../../../../../../nda-ui/scss/helpers/colors";
+@import "../../../../../../nda-ui/scss/helpers/vars";
+
+.help-button {
+  @extend .round-button-shadow;
+  background-color: $color-accent-orange;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: $z-help-button;
+}

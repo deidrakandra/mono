@@ -1,0 +1,26 @@
+.top-container {
+  width: $full-size;
+  line-height: $height-top;
+  font-size: .7em;
+  border-bottom: solid 1px $color-gray-dark;
+
+  div {
+    background-color: $color-main;
+    color: $color-white;
+  }
+
+  a {
+    color: $color-white;
+    padding: 0 15px;
+    border-right: solid 1px $color-white;
+    border-bottom: none;
+
+    &:hover {
+      color: $color-gray-light;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

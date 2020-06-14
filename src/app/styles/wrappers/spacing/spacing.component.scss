@@ -1,0 +1,51 @@
+@import "~projects/nda-ui/scss/helpers/colors";
+@import "~projects/nda-ui/scss/helpers/spacing";
+
+$height: 50px;
+
+.element {
+  height: $height;
+  width: $height;
+  background-color: $color-cool-blue-lighter;
+}
+
+.base {
+  height: $height;
+  background-color: $color-green-lighter;
+}
+
+.xl {
+  @extend .base;
+  width: $xl;
+}
+
+.lg {
+  @extend .base;
+  width: $lg;
+}
+
+.md {
+  @extend .base;
+  width: $md;
+}
+
+.sm {
+  @extend .base;
+  width: $sm;
+}
+
+.xs {
+  @extend .base;
+  width: $xs;
+}
+
+.none {
+  @extend .base;
+  width: $none;
+}
+
+.float {
+  display: inline-flex;
+}
+
+

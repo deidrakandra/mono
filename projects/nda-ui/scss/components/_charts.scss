@@ -1,0 +1,197 @@
+text {
+  font-size: .85em;
+  font-weight: $font-bold;
+  cursor: default;
+}
+
+.x-axis,
+.y-axis {
+  path,
+  line {
+    fill: none;
+    stroke: $color-base;
+    shape-rendering: crispEdges;
+  }
+}
+
+.legend {
+  text-anchor: end;
+  text-transform: capitalize;
+}
+
+
+.bar-chart {
+  font-size: $font-size-small;
+
+  .bar {
+    fill: $color-site-chart;
+    fill-opacity: .9;
+  }
+}
+
+.stacked-chart {
+  .bar {
+    fill: $color-site-chart;
+  }
+
+  .type {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.hierarchy-chart {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border-bottom: $border-default;
+  min-height: 250px;
+
+  .node {
+    circle {
+      cursor: pointer;
+      fill: $color-white;
+      stroke: $color-gray-dark;
+      stroke-width: .75px;
+    }
+  }
+
+  path.link {
+    fill: none;
+    stroke: $color-gray;
+    stroke-width: .5px;
+  }
+
+  #concept-info {
+    .info {
+      font-size: $font-size-xsmall;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .body {
+      padding: 20px;
+      p {
+        font-style: italic;
+      }
+    }
+
+    .rules {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .rule {
+      padding-bottom: 5px;
+    }
+    .inner-container {
+      overflow-y: auto;
+    }
+  }
+}
+
+.citation {
+  font-style: italic;
+  font-size: .75em;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.chart-detail-panel {
+  position: absolute;
+  pointer-events: visible;
+  border-radius: $border-radius;
+  background: $color-gray-lightest;
+  color: $color-gray-dark;
+  border: $border-default;
+  margin-top: 25px;
+  margin-left:25px;
+  width: 90%;
+
+  .header {
+    padding: 10px;
+    background: $color-gray-dark;
+    color: $color-white;
+    text-transform: none;
+  }
+
+  .footer {
+    padding: 5px;
+    height: 7%;
+    min-height: 40px;
+
+    .link {
+      text-align: right;
+    }
+  }
+
+  .info-close {
+    text-align: right;
+    padding-right: 0;
+    cursor: pointer;
+  }
+
+  .row {
+    margin: 0;
+  }
+}
+
+div.chart-tooltip {
+  @include baseTooltip();
+  max-width: 350px;
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: $font-size-small;
+  }
+
+  .rule {
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .element {
+    font-size: $font-size-xsmall;
+  }
+}
+
+.tooltip-wrapper {
+  display: inline;
+  position: relative;
+  text-align: center;
+  width: 4%;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+
+  .tooltip {
+    background: $color-gray-lighter;
+    border: $border-default;
+    bottom: -50%;
+    color: $color-main;
+    display: block;
+    left: 25px;
+    opacity: 0;
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    width: 250px;
+    font-size: .8em;
+    border-radius: $border-radius;
+  }
+
+  &:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.compliance {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}

@@ -1,0 +1,10 @@
+<nda-wizard [steps]="steps" outlet="wizard"></nda-wizard>
+<router-outlet name="wizard"></router-outlet>
+<div class="center m-top-lg">
+    <button class="flat-button" [routerLink]="[{ outlets: { wizard: 'landing' }}]">Landing</button>
+    <button class="flat-button" [routerLink]="[{ outlets: { wizard: 'collect' }}]">Collect</button>
+    <button class="flat-button" [routerLink]="[{ outlets: { wizard: 'question' }}]">?</button>
+    <button class="flat-button" [routerLink]="[{ outlets: { wizard: 'double-question' }}]">??</button>
+    <button class="flat-button" [routerLink]="[{ outlets: { wizard: 'profit' }}]">Profit</button>
+    <button class="flat-button" [routerLink]="[{ outlets: { wizard: 'complete' }}]">Complete</button>
+</div>

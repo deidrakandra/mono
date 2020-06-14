@@ -1,0 +1,14 @@
+@import "../helpers/colors";
+@import "../helpers/vars";
+
+section {
+  margin-bottom: 3em;
+  padding: 3em;
+  background-color: $color-gray-lightest;
+
+  &.outline {
+    background-color: transparent;
+    border: solid 3px $color-gray;
+    border-radius: $border-radius;
+  }
+}

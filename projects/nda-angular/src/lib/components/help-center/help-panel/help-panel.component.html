@@ -1,0 +1,6 @@
+<div [@rightSlide]="displayHelp" class="help-panel">
+    <nda-help-panel-header (closeHelp)="close()"></nda-help-panel-header>
+    <nda-help-panel-content [helpCenter]="helpCenter"></nda-help-panel-content>
+    <nda-help-panel-footer></nda-help-panel-footer>
+    <div *ngIf="helpCenter?.lastPublished" class="xsmall-font right-align italic"><span content="help-center.last-published"></span> {{ helpCenter.lastPublished }}</div>
+</div>

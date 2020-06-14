@@ -1,0 +1,9 @@
+<nda-labeled-control [label]="label" [isRequired]="isRequired" [errorMsg]="errorMsg">
+    <ng-container *ngIf="inputMask; else unmaskedInput">
+        <input #input [type]="inputType" [mask]="inputMask" [placeholder]="placeholder" [value]="_value" (keyup)="onKeyup(input.value, $event.key)" (blur)="onInputChange(input.value)" [class.invalid]="errorMsg" [disabled]="_disabled">
+    </ng-container>
+</nda-labeled-control>
+
+<ng-template #unmaskedInput>
+    <input #input [type]="inputType" [placeholder]="placeholder" [value]="_value" (keyup)="onKeyup(input.value, $event.key)" (blur)="onInputChange(input.value)" [class.invalid]="errorMsg" [disabled]="_disabled">
+</ng-template>

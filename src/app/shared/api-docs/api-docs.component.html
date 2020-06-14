@@ -1,0 +1,19 @@
+<h3>{{ type }}: {{ api.header || api.title }}</h3>
+<h5 *ngIf="api.desc" [innerHTML]="api.desc"></h5>
+
+<section *ngFor="let doc of api.docs">
+    <div class="m-bottom-md bold">
+        <pre><code [highlight]="doc.method" class="sample large-font"></code></pre>
+    </div>
+
+    <div class="m-bottom-md m-left-md" [innerHtml]="doc.desc"></div>
+
+    <h5>Params</h5>
+    <sg-param-list [params]="doc.params"></sg-param-list>
+
+    <h5>Returns</h5>
+    <div class="m-left-md" [innerHtml]="doc.returns"></div>
+
+    <h5>Notes</h5>
+    <ul><li *ngFor="let note of doc.notes"><p [innerHtml]="note"></p></li></ul>
+</section>

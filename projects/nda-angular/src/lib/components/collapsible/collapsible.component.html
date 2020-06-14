@@ -1,0 +1,11 @@
+<div class="clickable" (click)="toggle()">
+    <div class="collapsible-title row" [class.selected-collapsible]="!collapse">
+        <div class="col-sm">
+            <div [@rotate45]="collapse">+</div>
+        </div>
+        <div class="col-11">{{ heading }}</div>
+    </div>
+    <div class="row collapsible-content collapsible" [@collapseExpand]="collapse">
+        <ng-content></ng-content>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+@import "../helpers/colors";
+@import "../helpers/vars";
+
+pre {
+  color: $color-gray;
+
+  &.wrapped {
+    white-space: pre-wrap;
+  }
+}
+
+code {
+  font-family: monospace;
+  color: $color-gray;
+
+  &.outline {
+    border: 1px solid lightgray;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background-color: $color-white;
+    color: $color-secondary-dark;
+  }
+
+  &.format {
+    white-space: pre;
+  }
+
+  &.example {
+    background-color: $color-gray-lightest;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 20px 35px;
+    display: block;
+    border: 1px solid $color-gray;
+    border-radius: $border-radius;
+  }
+
+  &.sample {
+    padding: 30px 20px;
+    line-height: 24px;
+    border-radius: 3px;
+  }
+
+
+}

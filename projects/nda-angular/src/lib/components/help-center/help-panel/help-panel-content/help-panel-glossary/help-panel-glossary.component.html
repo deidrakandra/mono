@@ -1,0 +1,14 @@
+<div class="glossary help-item clickable" (click)="toggle()" *ngIf="glossaryTerm">
+    <div class="glossary-term help-item-title row" [class.selected-help-item]="!collapse">
+        <div class="col-sm">
+            <div [@rotate45]="collapse">+</div>
+        </div>
+        <div class="col-11">{{ term }}</div>
+    </div>
+    <div [@collapseExpand]="collapse">
+        <div class="glossary-definition help-item-content collapsible m-bottom-md">
+            <div [innerHtml]="definition"></div>
+            <div class="last-published"><span content="help-center.last-published-glossary"></span> {{ lastPublished }}</div>
+        </div>
+    </div>
+</div>

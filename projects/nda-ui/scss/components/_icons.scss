@@ -1,0 +1,18 @@
+
+.site-icon {
+  fill: $color-site-icon;
+}
+
+.full-fill {
+  path {
+    fill: $color-site-icon;
+  }
+}
+
+.small-icon {
+  width: 35px;
+}
+
+.invert {
+  filter: invert(100%);
+}

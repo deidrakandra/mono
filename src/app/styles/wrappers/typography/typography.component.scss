@@ -1,0 +1,19 @@
+@import "~projects/nda-ui/scss/helpers/mixins";
+
+code {
+  @include center(false, true);
+
+  &.inline {
+    position: relative;
+  }
+}
+
+.sample-box {
+  border: 1px dotted lightgray;
+  padding: 2px;
+}
+
+.sample-bottom {
+  @extend .sample-box;
+  height: 30px;
+}

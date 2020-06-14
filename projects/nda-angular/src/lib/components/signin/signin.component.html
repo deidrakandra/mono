@@ -1,0 +1,23 @@
+<div class="signin">
+    <div class="row">
+        <div class="col-12 center">
+            <h4 content="signin.header" class="m-bottom-none"></h4>
+            <div content="signin.intro" class="intro-text m-bottom-md"></div>
+        </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-12">
+                <nda-input formControlName="username" isRequired="true" label="signin.username" [errorMsg]="reqErrorMsg('username')"></nda-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nda-input formControlName="password" type="password" isRequired="true" label="signin.password" [errorMsg]="reqErrorMsg('password')"></nda-input>
+            </div>
+        </div>
+        <div class="center m-top-lg">
+            <button type="submit" class="outline-button" content="button.signin" [disabled]="!form.valid"></button>
+        </div>
+    </form>
+</div>

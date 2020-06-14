@@ -1,0 +1,11 @@
+{
+  "name": "@nda/electron",
+  "version": "@VERSION",
+  "description": "NDA Electron Library",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0",
+    "@nda/angular": "@VERSION",
+    "electron": "^2.0.7"
+  }
+}

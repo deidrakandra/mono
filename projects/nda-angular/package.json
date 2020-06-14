@@ -1,0 +1,21 @@
+{
+  "name": "@nda/angular",
+  "version": "@VERSION",
+  "description": "NDA Angular Component Library",
+  "dependencies": {
+    "fs-extra": "^8.0.1",
+    "git-describe": "^4.0.3",
+    "moment": "^2.24.0",
+    "ngx-mask": "^7.9.8",
+    "ngx-moment": "^3.4.0",
+    "ngx-spinner": "^6.1.2"
+  },
+  "peerDependencies": {
+    "@angular/animations": "^8.0.0",
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "@angular/forms": "^8.0.0",
+    "@angular/http": "^8.0.0",
+    "@nda/ui": "@VERSION"
+  }
+}

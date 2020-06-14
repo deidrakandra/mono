@@ -1,0 +1,86 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="row m-bottom-sm">
+        <div class="col-12" formGroupName="clinicalTrialGroup">
+            <label>Focus Hidden on Radio</label>
+            <div class="row">
+                <div class="col-12 flex-container">
+                    <div>
+                        <input id="clinicalTrialNo" type="radio" [value]="false" formControlName="clinical_trial_ind">
+                    </div>
+                    <div>
+                        <label for="clinicalTrialNo" class="radio-label">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 flex-container">
+                    <div>
+                        <input #isClinicalTrial id="clinicalTrialYes" type="radio" [value]="true" formControlName="clinical_trial_ind">
+                    </div>
+                    <div>
+                        <label for="clinicalTrialYes" class="radio-label">Yes</label>
+                        <div *ngIf="isClinicalTrial.checked" class="checkbox-align">
+                            <nda-input [focusOn]="isClinicalTrial.checked" formControlName="clinical_trial_id" label="Text Field"></nda-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-bottom-sm">
+        <div class="col-12 flex-container" formGroupName="existingSourceGroup">
+            <div>
+                <input #existing type="checkbox" formControlName="data_source_ind" id="existingDataSourceCheckbox"/>
+            </div>
+            <div class="full-width">
+                <label class="checkbox-label" for="existingDataSourceCheckbox">Focus Hidden on Checkbox</label>
+                <div *ngIf="existing.checked" class="checkbox-align">
+                    <nda-input [focusOn]="existing.checked" formControlName="data_source_desc" label="Text Field"></nda-input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-bottom-sm">
+        <div class="col-12">
+            <input type="checkbox" #test formControlName="test_ind" id="numCheck"><label for="numCheck" class="checkbox-label">Focus Number</label>
+        </div>
+        <div class="col-12">
+            <input [focusOn]="test.checked" type="number" formControlName="test_input">
+        </div>
+    </div>
+
+    <div class="row m-bottom-sm">
+        <div class="col-12">
+            <input type="checkbox" #testTa formControlName="test_ta_ind" id="textareaCheck"><label for="textareaCheck" class="checkbox-label">Focus TextArea</label>
+        </div>
+        <div class="col-12">
+            <nda-textarea [focusOn]="testTa.checked" [rows]="2" formControlName="test_ta"></nda-textarea>
+        </div>
+    </div>
+
+    <div class="row m-bottom-sm">
+        <div class="col-12">
+            <input type="checkbox" #testDp formControlName="test_dp_ind" id="dateCheck"><label for="dateCheck" class="checkbox-label">Focus Datepicker</label>
+        </div>
+        <div class="col-12">
+            <nda-datepicker [focusOn]="testDp.checked" formControlName="test_dp"></nda-datepicker>
+        </div>
+    </div>
+
+    <div class="row m-bottom-sm">
+        <div class="col-12">
+            <input type="checkbox" #testSel formControlName="test_sel_ind" id="selCheck"><label for="selCheck" class="checkbox-label">Focus Select</label>
+        </div>
+        <div class="col-12">
+            <select [focusOn]="testSel.checked" formControlName="test_sel">
+                <option [value]="1">One</option>
+                <option [value]="2">Two</option>
+                <option [value]="3">Three</option>
+            </select>
+        </div>
+    </div>
+
+</form>

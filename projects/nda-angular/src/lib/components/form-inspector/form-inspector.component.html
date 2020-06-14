@@ -1,0 +1,13 @@
+<nda-collapsible heading="View real-time form values & validation state">
+    <div class="small-font">
+        <div class="row">
+            <div class="col-6">
+                <pre class="wrapped">Form Status: {{ form.status | json }}</pre>
+                <pre class="wrapped">Form Value: {{ form.value | json }}</pre>
+            </div>
+            <div class="col-6">
+                <pre class="wrapped">Errors: {{ errors | json }}</pre>
+            </div>
+        </div>
+    </div>
+</nda-collapsible>

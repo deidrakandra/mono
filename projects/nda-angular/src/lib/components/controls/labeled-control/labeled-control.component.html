@@ -1,0 +1,13 @@
+<div class="control">
+    <label *ngIf="label; else control" class="input-label">
+        <span content="{{ label }}" [class.required]="isRequired"></span>
+        <ng-container [ngTemplateOutlet]="control"></ng-container>
+    </label>
+    <div *ngIf="errorMsg" class="validation-msg">{{ errorMsg }}</div>
+</div>
+
+<ng-template #control>
+    <div>
+        <ng-content></ng-content>
+    </div>
+</ng-template>

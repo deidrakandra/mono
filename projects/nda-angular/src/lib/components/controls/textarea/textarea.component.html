@@ -1,0 +1,3 @@
+<nda-labeled-control [label]="label" [isRequired]="isRequired" [errorMsg]="errorMsg">
+    <textarea #textarea [rows]="rowCount" [placeholder]="placeholder" [value]="_value" [disabled]="_disabled" (keyup)="onKeyup(textarea.value, $event.key)" (blur)="onInputChange(textarea.value)" [class.invalid]="errorMsg"></textarea>
+</nda-labeled-control>

@@ -1,0 +1,8 @@
+<sg-control-wrapper [form]="form" (disable)="toggleDisable($event)" (submit)="onSubmit()">
+    <form [formGroup]="form">
+        <div class="m-bottom-md"><nda-datepicker formControlName="datepicker" label="Date" [errorMsg]="errorMsg('datepicker')" isRequired="true"></nda-datepicker></div>
+        <div class="m-bottom-md"><nda-datepicker formControlName="datepickerTimestamp" label="Init Date: timestamp 1261375200000" [errorMsg]="errorMsg('datepickerTimestamp')" isRequired="true"></nda-datepicker></div>
+        <div class="m-bottom-md"><nda-datepicker formControlName="datepickerString" label="Init Date: string '12/21/2021'" [errorMsg]="errorMsg('datepickerString')"></nda-datepicker></div>
+<!--        <div class="m-bottom-md"><nda-datepicker formControlName="datepickerInvalid" label="Init Date: string '21/12/2021'" [errorMsg]="errorMsg('datepickerInvalid')" isRequired="true"></nda-datepicker></div>-->
+    </form>
+</sg-control-wrapper>

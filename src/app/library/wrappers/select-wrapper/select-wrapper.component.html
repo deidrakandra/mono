@@ -1,0 +1,6 @@
+<sg-control-wrapper [form]="form" (disable)="toggleDisable($event)" (submit)="onSubmit()">
+    <form [formGroup]="form">
+        <nda-select formControlName="select" [options]="options" label="Select One"></nda-select>
+        <div class="m-top-sm"><nda-select formControlName="selectTwo" [blank]="true" [options]="options" label="Select Two" isRequired="true" [errorMsg]="reqErrorMsg('selectTwo')"></nda-select></div>
+    </form>
+</sg-control-wrapper>

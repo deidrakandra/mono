@@ -1,0 +1,35 @@
+@import "../../../../../nda-ui/scss/helpers/colors";
+
+
+.bottom-container {
+  margin-top: 23em;
+}
+
+footer {
+  .lg-img {
+    width: 200px;
+  }
+
+  .md-img {
+    width: 100px;
+  }
+
+  .sm-img {
+    width: 50px;
+  }
+
+  .footer-container {
+    padding: 3em 15em 2em;
+  }
+
+  a:hover {
+    border-bottom: none;
+  }
+
+  .version {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: .5em;
+  }
+}

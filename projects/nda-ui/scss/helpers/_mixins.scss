@@ -1,0 +1,105 @@
+@import "vars";
+@import "colors";
+
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin blur($value) {
+  filter: blur($value);
+  -webkit-filter: blur($value);
+}
+
+@mixin grayscale($value) {
+  filter: grayscale($value);
+  -webkit-filter: grayscale($value);
+}
+
+@mixin blur-grayscale($blur, $gray) {
+  filter: blur($blur) grayscale($gray);
+  -webkit-filter: blur($blur) grayscale($gray);
+}
+
+@mixin baseTooltip() {
+  position: absolute;
+  text-align: center;
+  pointer-events: none;
+  padding: 10px;
+  font-size: $font-size-small;
+  border-radius: $border-radius;
+  background: $color-main;
+  color: $color-white;
+  border: $border-default;
+}
+
+@mixin resetAnchor() {
+  border-bottom: none;
+  color: $color-font;
+}
+
+@mixin hoverAnchor() {
+  opacity: $link-hover-opacity;
+  cursor: pointer;
+}
+
+@mixin circle($diameter) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+}
+
+@mixin sticky {
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+}
+
+@mixin data-row {
+  &:hover {
+    cursor: pointer !important;
+    background-color: $color-gold-lightest !important;
+  }
+
+  span {
+    word-wrap: break-word;
+    padding: 5px 0;
+  }
+}
+
+@mixin selected-row {
+  background-color: $color-primary-darker !important;
+  color: white !important;
+
+  a {
+    color: white;
+    border-bottom: dotted 1px white;
+  }
+}
+
+@mixin shadow {
+  box-shadow:
+    0 3px 5px -1px rgba(0,0,0,.2),
+    0 6px 10px 0 rgba(0,0,0,.14),
+    0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+@mixin focus {
+  outline: none;
+  outline-offset: 0;
+  box-shadow:
+    1px 1px 1px 0 $color-focus,
+    -1px 1px 1px 0 $color-focus,
+    1px -1px 1px 0 $color-focus,
+    -1px -1px 1px 0 $color-focus;
+}

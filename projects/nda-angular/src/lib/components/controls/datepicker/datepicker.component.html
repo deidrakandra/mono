@@ -1,0 +1,9 @@
+<div class="datepicker">
+    <nda-labeled-control [label]="label" [isRequired]="isRequired" [errorMsg]="errorMsg">
+        <div class="control-container">
+            <input #date type="text" [mask]="mask" [placeholder]="format" [value]="_value" (keyup)="onKeyup(date.value, $event.key)" (blur)="onInputChange(date.value)" [class.invalid]="errorMsg" [class.focus]="buttonHasFocus" [disabled]="_disabled">
+            <button type="button" (click)="toggleHelper()" [class.invalid]="errorMsg" [disabled]="_disabled" (focusin)="buttonFocused(true)" (focusout)="buttonFocused(false)"><i class="fa fa-calendar-o"></i></button>
+        </div>
+    </nda-labeled-control>
+    <nda-date-helper #helper [format]="format" (selectedDate)="onDateFromHelper($event)"></nda-date-helper>
+</div>

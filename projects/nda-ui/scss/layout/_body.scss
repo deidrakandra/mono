@@ -1,0 +1,288 @@
+@import "../helpers/colors";
+@import "../helpers/typography";
+@import "../helpers/vars";
+@import "../helpers/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: $full-size;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  font-family: $font-sans;
+  font-weight: $font-normal;
+  font-size: 1rem;
+  overflow-y: auto;
+  color: $color-font;
+  margin: 0;
+}
+
+.position-container {
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+}
+
+
+ul {
+  list-style: none;
+}
+
+ul.list {
+  padding-inline-start: 0;
+  margin-block-start: .1em;
+}
+
+ul.list-2col {
+  @extend .list;
+  columns: 2 auto;
+}
+
+ul.list-3col {
+  @extend .list;
+  columns: 3 auto;
+}
+
+a:focus,
+li:focus {
+  outline: none;
+}
+
+a,
+.link-style {
+  color: $color-cool-blue;
+  border-bottom: dotted 1px $color-cool-blue;
+  text-decoration: none;
+  transition: all .2s ease;
+
+  &:hover {
+    opacity: $link-hover-opacity;
+    border-bottom: solid 1px $color-cool-blue;
+  }
+
+  span {
+    padding-right: 10px;
+  }
+}
+
+nav {
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+}
+
+h1, h2 {
+  color: $color-main-blue;
+}
+
+.main-container {
+  width: 80%;
+  margin: auto;
+}
+
+.page-content,
+.content,
+.banner{
+  a,
+  .link-style{
+    transition: all .2s ease;
+
+    &:hover {
+      opacity: $link-hover-opacity;
+      border-bottom: solid 1px $color-cool-blue;
+    }
+  }
+}
+
+.page-content {
+  margin-top: 4em;
+
+  ul {
+    list-style: disc;
+  }
+}
+
+ul.inline-list {
+  li {
+    display: inline-block;
+  }
+  a {
+    border-bottom: none;
+  }
+}
+
+.bottom-container {
+  margin-top: $height-footer + 5em;
+}
+
+.content-only {
+  margin: 5em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: $zindex-sticky;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.bottom-align {
+  vertical-align: bottom;
+}
+
+.center {
+  text-align: center;
+}
+
+.tooltip-container {
+  @include baseTooltip();
+  opacity: 0;
+  z-index: $zindex-tooltip;
+}
+
+.full-height {
+  height: $full-size;
+}
+
+.full-width {
+  width: $full-size;
+}
+
+.checkmark{
+  display:inline-block;
+
+  &:after{
+    content: '';
+    display: block;
+    width: 7px;
+    height: 15px;
+    border: solid $color-gray-dark;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.conceal {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+
+.link {
+  color: $color-link;
+  border-bottom: dotted 1px $color-link;
+  cursor: pointer;
+
+  &:focus {
+    text-decoration: none;
+  }
+  &:hover {
+    border-bottom: solid 1px $color-link;
+  }
+
+  span {
+    padding-right: 10px;
+  }
+}
+
+
+.closer {
+  text-align: right;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.cursor-arrow {
+  cursor: default;
+}
+
+.clickable {
+  cursor: pointer !important;
+}
+
+.inline {
+  display: inline;
+}
+
+.wrapping {
+  line-height: 1.6;
+}
+
+*:disabled:hover {
+  cursor: default !important;
+}
+
+.disabled {
+  color: $color-gray-light;
+}
+
+.collapsible {
+  overflow: hidden;
+}
+
+.even {
+  background-color: $color-gray-lightest;
+}
+
+b, strong {
+  font-weight: $font-bold;
+}
+
+.highlight {
+  background-color: $color-gold-lightest;
+  padding: 1px 3px;
+}
+
+.sidebar {
+  border-left: 5px solid $color-green;
+  padding: 25px;
+}
+
+.sidebar-rounded {
+  @extend .sidebar;
+  border-radius: 5px;
+}
+
+
+hr.hr-fade {
+  border: 0;
+  height: 1px;
+  width: 75%;
+  text-align: center;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, $color-gray-lighter, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, $color-gray-lighter, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, $color-gray-lighter, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, $color-gray-lighter, #f0f0f0);
+}
+
+hr.hr-solid {
+  height: 0;
+  width: 60%;
+  text-align: center;
+  border-top: 1px solid $color-gray-lighter;
+}

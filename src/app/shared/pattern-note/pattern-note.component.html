@@ -1,0 +1,10 @@
+<div *ngFor="let p of note.pattern" class="m-bottom-md">
+    <h4 [innerHTML]="p.title"></h4>
+    <pre *ngIf="p.example"><code [highlight]="p.example" class="sample"></code></pre>
+    <ul class="step-notes"><li *ngFor="let s of p.notes" [innerHtml]="s"></li></ul>
+</div>
+
+<div class="m-top-lg">
+    <h4>Notes</h4>
+    <ul><li *ngFor="let s of note.notes" [innerHtml]="s"></li></ul>
+</div>

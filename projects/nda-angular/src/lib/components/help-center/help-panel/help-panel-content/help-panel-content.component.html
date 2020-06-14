@@ -1,0 +1,32 @@
+<div class="help-content">
+    <ng-container *ngIf="available; else unavailable">
+        <div class="content-title row">
+            <div class="col-12">
+                {{ title }}
+            </div>
+        </div>
+        <div class="content-description row">
+            <div class="col-12" [innerHtml]="overview"></div>
+        </div>
+        <div class="section-header row">
+            <div content="help-center.faq-header" class="col-12"></div>
+        </div>
+        <div class="faqs row">
+            <div class="col-12">
+                <nda-help-panel-faq *ngFor="let faq of faqs" [faq]="faq" [videoIcon]="videoIcon"></nda-help-panel-faq>
+            </div>
+        </div>
+        <div class="section-header row">
+            <div content="help-center.glossary-header" class="col-12"></div>
+        </div>
+        <div class="glossary row">
+            <div class="col-12">
+                <nda-help-panel-glossary *ngFor="let term of glossary" [glossaryTerm]="term"></nda-help-panel-glossary>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<ng-template #unavailable>
+    <div class="center m-top-lg italic" content="help-center.unavailable"></div>
+</ng-template>

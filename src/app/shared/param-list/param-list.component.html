@@ -1,0 +1,11 @@
+<ul>
+    <ng-container *ngIf="notEmpty; else empty">
+        <li *ngFor="let param of params">
+            <sg-param [param]="param"></sg-param>
+        </li>
+    </ng-container>
+</ul>
+
+<ng-template #empty>
+    <li><code>none</code></li>
+</ng-template>

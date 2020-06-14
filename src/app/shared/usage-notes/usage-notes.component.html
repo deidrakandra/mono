@@ -1,0 +1,14 @@
+<div>
+    <div class="m-bottom-lg">
+        <pre><code [highlight]="note.example" class="sample"></code></pre>
+    </div>
+
+    <h4>Inputs</h4>
+    <sg-param-list [params]="note.inputs"></sg-param-list>
+
+    <h4>Outputs</h4>
+    <sg-param-list [params]="note.outputs"></sg-param-list>
+
+    <h4>Notes</h4>
+    <ul><li *ngFor="let s of note.notes" [innerHtml]="s"></li></ul>
+</div>

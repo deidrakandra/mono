@@ -1,0 +1,53 @@
+@import "colors";
+
+// Colors
+$color-main:          $color-gray-dark;
+$color-main-light:    $color-gray-lightest;
+$color-main-blue:     $color-primary-darker;
+$color-main-red:      $color-secondary-darkest;
+
+$color-def-submenu:          $color-gray-warm-dark;
+$color-def-nav-highlight:    $color-gray;
+
+$color-font:          $color-base;
+
+// Sizing
+$full-size:           100%;
+$margin-default:      3em;
+$margin-medium:       2em;
+$margin-half:         1.5em;
+$margin-small:        1em;
+
+$font-size-medium:    .9em;
+$font-size-small:     .8em;
+$font-size-xsmall:    .75em;
+
+// Footer
+$height-footer:       19.75em;
+$height-top:          1.8em;
+
+// Padding
+$clean-edges:         0 10px;
+
+// Logo
+$height-logo:         70px;
+
+// Borders
+$border-thick:                solid 4px $color-main;
+$border-medium:               solid 2px $color-main;
+$border-default:              solid 1px $color-main;
+$border-placeholder:          solid 1px transparent;
+$border-medium-placeholder:   solid 2px transparent;
+$border-radius:               2px;
+
+// Z-Index
+$zindex-dialog:       2;
+$zindex-sticky:       3;
+$z-help-button:       4;
+$z-help-request-panel: 5;
+$zindex-tooltip:      10;
+
+
+
+// Site Defaults
+$link-hover-opacity:  .7;

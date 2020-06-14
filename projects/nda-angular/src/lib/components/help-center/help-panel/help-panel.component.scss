@@ -1,0 +1,16 @@
+@import "../../../../../../nda-ui/scss/helpers/mixins";
+@import "../../../../../../nda-ui/scss/helpers/colors";
+@import "../../../../../../nda-ui/scss/helpers/vars";
+
+.help-panel {
+  @include shadow();
+  height: calc(100vh - 10px);
+  width: 40vw;
+  position: fixed;
+  top: 5px;
+  padding: 10px 20px 3px;
+  background-color: $color-gray-lightest;
+  border: 1px solid $color-gray-light;
+  font-size: .85em;
+  z-index: $z-help-request-panel;
+}

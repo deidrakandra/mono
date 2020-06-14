@@ -1,0 +1,9 @@
+@import "~projects/nda-ui/scss/helpers/colors";
+
+.top-menu-container {
+  border-bottom: 1px solid $color-gray-dark;
+  border-top: 1px solid $color-gray-dark;
+  background-color: $color-gray-lightest;
+  padding: 10px;
+}
+

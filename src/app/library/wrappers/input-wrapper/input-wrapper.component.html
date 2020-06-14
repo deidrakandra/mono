@@ -1,0 +1,10 @@
+<sg-control-wrapper [form]="form" (disable)="toggleDisable($event)" (submit)="onSubmit()">
+    <form [formGroup]="form">
+        <div class="m-bottom-md"><nda-input formControlName="input" label="Text Input" isRequired="true" [errorMsg]="reqErrorMsg('input')"></nda-input></div>
+        <div class="m-bottom-md"><nda-input formControlName="inputPlaceholder" label="Text Input w/ placeholder" placeholder="Text Input Placeholder" isRequired="true" [errorMsg]="reqErrorMsg('inputPlaceholder')"></nda-input></div>
+        <div class="m-bottom-md"><nda-input formControlName="inputMask" label="Text Input w/ mask & placeholder" inputMask="(000) 000-0000" placeholder="(999) 999-9999" [errorMsg]="errorMsg('inputMask')"></nda-input></div>
+        <div class="m-bottom-md"><nda-input formControlName="inputNoVal" label="Text Input (no validation)"></nda-input></div>
+        <div class="m-bottom-md"><nda-input type="number" formControlName="inputNumber" label="Number Input (no validation)"></nda-input></div>
+        <div class="m-bottom-md"><nda-input type="password" formControlName="inputPassword" placeholder="Enter password"></nda-input></div>
+    </form>
+</sg-control-wrapper>

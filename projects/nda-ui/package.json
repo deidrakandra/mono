@@ -1,0 +1,8 @@
+{
+  "name": "@nda/ui",
+  "version": "@VERSION",
+  "description": "(S)CSS for NDA",
+  "peerDependencies": {
+    
+  }
+}

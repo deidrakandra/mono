@@ -1,0 +1,6 @@
+<nda-labeled-control [label]="label" [isRequired]="isRequired" [errorMsg]="errorMsg">
+    <select #selectCtrl [value]="_value" [class.invalid]="errorMsg" [disabled]="_disabled" (change)="onInputChange(selectCtrl.value)">
+        <option *ngIf="blank" [value]=""></option>
+        <option *ngFor="let o of options" [value]="o.value">{{ o.label }}</option>
+    </select>
+</nda-labeled-control>

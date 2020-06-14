@@ -1,0 +1,5 @@
+img.non-svg {
+  @include center(true, true);
+  max-width: 85%;
+  width: auto;
+}

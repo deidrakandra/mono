@@ -1,0 +1,50 @@
+@import "../helpers/colors";
+
+.help-item {
+  margin-bottom: 3px;
+
+  p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 1.2em;
+  }
+
+  .selected-help-item {
+    font-weight: bold;
+    color: $color-primary-darker;
+  }
+
+  &:hover {
+    .help-item-title {
+      @extend .selected-help-item;
+    }
+  }
+
+  .last-published {
+    text-align: right;
+    font-style: italic;
+    font-size: .75em;
+  }
+
+  .help-item-title {
+  }
+
+  .help-item-content {
+    margin: 0 3em 2em;
+    font-size: .9em;
+    pointer-events: none;
+
+    & > .last-published {
+      @extend .last-published;
+      margin-top: -12px;
+    }
+
+    &.collapsed .video {
+      pointer-events: none;
+    }
+  }
+
+  .video > img {
+    width: 20px;
+    vertical-align: bottom;
+  }
+}

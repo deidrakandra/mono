@@ -1,0 +1,15 @@
+<div class="faq help-item clickable" (click)="toggle($event)" *ngIf="faq">
+    <div class="faq-question help-item-title row" [class.selected-help-item]="!collapse">
+        <div class="col-sm">
+            <div [@rotate45]="collapse">+</div>
+        </div>
+        <div class="col-11"><span>{{ question }}</span><span *ngIf="video" class="video"><img src="{{ videoIcon}}" alt="Video"></span></div>
+    </div>
+    <div [@collapseExpand]="collapse">
+        <div class="faq-answer help-item-content collapsible" [class.collapsed]="collapse">
+            <div [innerHtml]="answer"></div>
+            <div class="last-published"><span content="help-center.last-published-faq"></span> {{ lastPublished }}</div>
+            <nda-video [video]="video"></nda-video>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,186 @@
+// spacing: standalone margins and padding for generic spacing requirements
+
+$none:      0;
+$xs:        5px;
+$sm:        10px;
+$md:        25px;
+$lg:        50px;
+$xl:        100px;
+
+//////// MARGINS ////////
+
+.m-top-none {
+  margin-top: $none;
+}
+.m-top-xs {
+  margin-top: $xs;
+}
+.m-top-sm {
+  margin-top: $sm;
+}
+.m-top-md {
+  margin-top: $md;
+}
+.m-top-lg {
+  margin-top: $lg;
+}
+.m-top-xl {
+  margin-top: $xl;
+}
+
+
+.m-right-none {
+  margin-right: $none;
+}
+.m-right-xs {
+  margin-right: $xs;
+}
+.m-right-sm {
+  margin-right: $sm;
+}
+.m-right-md {
+  margin-right: $md;
+}
+.m-right-lg {
+  margin-right: $lg;
+}
+.m-right-xl {
+  margin-right: $xl;
+}
+
+
+.m-bottom-none {
+  margin-bottom: $none;
+}
+.m-bottom-xs {
+  margin-bottom: $xs;
+}
+.m-bottom-sm {
+  margin-bottom: $sm;
+}
+.m-bottom-md {
+  margin-bottom: $md;
+}
+.m-bottom-lg {
+  margin-bottom: $lg;
+}
+.m-bottom-xl {
+  margin-bottom: $xl;
+}
+
+
+.m-left-none {
+  margin-left: $none;
+}
+.m-left-xs {
+  margin-left: $xs;
+}
+.m-left-sm {
+  margin-left: $sm;
+}
+.m-left-md {
+  margin-left: $md;
+}
+.m-left-md-neg {
+  margin-left: -$md;
+}
+.m-left-lg {
+  margin-left: $lg;
+}
+.m-left-xl {
+  margin-left: $xl;
+}
+
+
+
+//////// PADDING ////////
+
+.p-top-none {
+  padding-top: $none;
+}
+.p-top-xs {
+  padding-top: $xs;
+}
+.p-top-sm {
+  padding-top: $sm;
+}
+.p-top-md {
+  padding-top: $md;
+}
+.p-top-lg {
+  padding-top: $lg;
+}
+.p-top-xl {
+  padding-top: $xl;
+}
+
+
+.p-right-none {
+  padding-right: $none;
+}
+.p-right-xs {
+  padding-right: $xs;
+}
+.p-right-sm {
+  padding-right: $sm;
+}
+.p-right-md {
+  padding-right: $md;
+}
+.p-right-lg {
+  padding-right: $lg;
+}
+.p-right-xl {
+  padding-right: $xl;
+}
+
+
+.p-bottom-none {
+  padding-bottom: $none;
+}
+.p-bottom-xs {
+  padding-bottom: $xs;
+}
+.p-bottom-sm {
+  padding-bottom: $sm;
+}
+.p-bottom-md {
+  padding-bottom: $md;
+}
+.p-bottom-lg {
+  padding-bottom: $lg;
+}
+.p-bottom-xl {
+  padding-bottom: $xl;
+}
+
+
+.p-left-none {
+  padding-left: $none;
+}
+.p-left-xs {
+  padding-left: $xs;
+}
+.p-left-sm {
+  padding-left: $sm;
+}
+.p-left-md {
+  padding-left: $md;
+}
+.p-left-lg {
+  padding-left: $lg;
+}
+.p-left-xl {
+  padding-left: $xl;
+}
+
+
+
+//////// MISC ////////
+.section-spacer {
+  margin-top: 100px;
+}
+
+.page-header-spacer {
+  margin-top: 10em;
+}

@@ -1,0 +1,3 @@
+<div class="wizard-container">
+    <nda-wizard-step *ngFor="let step of steps; last as isLast" [final]="isLast" [title]="step.title" [state]="step.state" [connectorWidth]="connectorWidth"></nda-wizard-step>
+</div>

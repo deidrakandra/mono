@@ -1,0 +1,61 @@
+<div class="sidebar">
+    <h4>New to Angular?</h4>
+    <p>These will help you to get started</p>
+    <nda-collapsible heading="Environment Setup">
+        <section>
+            <h4>Node & NPM</h4>
+            <p>Make sure you have <code class="highlight">node v12.x</code> and <code class="highlight">npm v6.x</code> or greater installed by running <code class="highlight">node -v</code> and <code class="highlight">npm -v</code></p>
+            <p>Don't have it? Everything you need to know about downloading is <a href="https://nodejs.org/en/download/" target="_blank">here</a>.</p>
+
+            <h4 class="m-top-lg">Update <code class="highlight">.npmrc</code> for our private nexus npm repository</h4>
+            <p>Set the registry to nexus</p>
+            <code class="example">npm config set registry=https://nexus.nimhda.org/repository/nda-npm/</code>
+            <p>Add your nexus user to npm</p>
+            <code class="example">npm adduser --registry=https://nexus.nimhda.org/repository/nda-npm/</code>
+            <p>Enter your nexus username, password and email</p>
+
+            <h4 class="m-top-lg">Angular CLI</h4>
+            <p>Install globally</p>
+            <code class="example">npm install -g @angular/cli</code>
+
+            <h4 class="m-top-lg">NDA Schematics</h4>
+            <p>Install globally</p>
+            <code class="example">npm install -g @nda/schematics</code>
+        </section>
+    </nda-collapsible>
+    <nda-collapsible heading="Resources">
+        <section>
+            <div class="row">
+                <div class="col-4">
+                    <p><a href="https://angular.io/docs" target="_blank">Angular Docs</a></p>
+                    <p><a href="https://github.com/angular/angular-cli/wiki" target="_blank">Angular CLI</a></p>
+                </div>
+                <div class="col-4">
+                    <p><a href="https://www.typescriptlang.org/docs/home.html" target="_blank">Typescript</a></p>
+                    <p><a href="https://github.com/ngrx/platform/blob/master/README.md" target="_blank">NgRx</a></p>
+                </div>
+                <div class="col-4">
+                    <p><a href="https://angular.io/guide/styleguide" target="_blank">Angular Style Guide</a></p>
+                    <p><a href="http://git.nimhda.org/projects/FEF/repos/angular/browse" target="_blank">Lib Source</a></p>
+                </div>
+            </div>
+        </section>
+    </nda-collapsible>
+</div>
+
+<h4 class="m-top-lg">Create new NDA angular app</h4>
+<code class="example">ng new [name] -c @nda/schematics</code>
+<p>where <code class="highlight">[name]</code> is the name of your new app</p>
+
+<h4 class="m-top-lg">Set cms content id</h4>
+<p>Open <code class="highlight">src/environments/environment.ts</code> and <code class="highlight">src/environments/environment.prod.ts</code></p>
+<p>Add cms configuration and content ids. Leave as empty string if project configuration is not used.</p>
+
+<h4 class="m-top-lg">Start in dev mode</h4>
+<code class="example">npm run start</code>
+
+<h4 class="m-top-lg">Build for production</h4>
+<code class="example">npm run build</code>
+
+<h4 class="m-top-lg">Update nda libraries to latest release</h4>
+<code class="example">npm update @nda/&#123;angular,ui&#125;</code>

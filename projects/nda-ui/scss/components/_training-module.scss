@@ -1,0 +1,115 @@
+// styles for training module component
+
+$video-width:   800px;
+$video-height:  600px;
+
+$highlight-color: $color-primary-darker;
+//$highlight-color: $color-gray-dark;
+//$highlight-color: $color-secondary-darkest;
+
+training-module {
+  .component-container {
+    padding: 10px;
+  }
+
+  div {
+    padding: 3px;
+  }
+}
+
+training-slide-deck {
+  .slide-deck {
+    border-top: 3px solid $highlight-color;
+    border-bottom: 3px solid $highlight-color;
+    margin-top: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 45em;
+  }
+
+  .slide-list {
+    background-color: $color-gray-lightest;
+    font-size: .95em;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .slide-item {
+    .row {
+      transition: all .1s ease-in-out;
+      &:hover {
+        color: $color-gray-lightest;
+        background-color: $highlight-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .selected {
+    color: $color-gray-lightest;
+    background-color: $highlight-color;
+  }
+
+  .checkmark:after {
+    border-color: $color-green;
+  }
+}
+
+training-slide {
+  .slide {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .slide-count {
+    float: right;
+    font-size: .65em;
+    font-style: italic;
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  .slide-content {
+    margin-bottom: 15px;
+  }
+
+  video {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+  }
+}
+
+training-nav {
+  .nav {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    font-weight: $font-bold;
+  }
+
+  .custom-choice {
+    height: 8%;
+  }
+
+  .default-choice {
+    height: 3%;
+  }
+
+  .slide-decision {
+    p {
+    //p:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  .slide-button {
+    @extend .flat-button;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}

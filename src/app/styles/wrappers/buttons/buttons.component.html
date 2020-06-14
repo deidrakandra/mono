@@ -1,0 +1,55 @@
+<div class="m-top-sm">
+    <div class="row m-bottom-md">
+        <div class="col-12 right-align">
+            <input id="disableToggle" type="checkbox" (change)="toggleDisable()"/><label for="disableToggle" class="checkbox-label">Disable Buttons</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button class="primary-button" [disabled]="disabled">Primary</button>
+        </div>
+        <div class="col-8 medium-font">
+            <code>&lt;button class="primary-button">Primary&lt;/button></code>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button class="outline-button" [disabled]="disabled">Outline</button>
+        </div>
+        <div class="col-8 medium-font">
+            <code>&lt;button class="outline-button">Outline&lt;/button></code>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button class="solid-button" [disabled]="disabled">Solid</button>
+        </div>
+        <div class="col-8 medium-font">
+            <code>&lt;button class="solid-button">Solid&lt;/button></code>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button class="flat-button" [disabled]="disabled">Flat</button>
+        </div>
+        <div class="col-8 medium-font">
+            <code>&lt;button class="flat-button">Flat&lt;/button></code>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button class="round-button-outline" [disabled]="disabled">!</button>
+        </div>
+        <div class="col-8 medium-font">
+            <code>&lt;button class="round-button-outline">!&lt;/button></code>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button class="round-button-shadow" [disabled]="disabled">!</button>
+        </div>
+        <div class="col-8 medium-font">
+            <code>&lt;button class="round-button-shadow">!&lt;/button></code>
+        </div>
+    </div>
+</div>

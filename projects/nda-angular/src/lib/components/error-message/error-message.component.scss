@@ -1,0 +1,23 @@
+@import "../../../../../nda-ui/scss/helpers/colors";
+
+.error-container {
+  color: $color-error;
+  border: 2px solid $color-error;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  font-size: .85em;
+
+  .error {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+
+  .medium-font {
+    font-size: 1.3em;
+  }
+
+}

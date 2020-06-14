@@ -1,0 +1,7 @@
+<sg-control-wrapper [form]="form" (submit)="onSubmit()" (disable)="toggleDisable($event)">
+    <form [formGroup]="form">
+        <div class="m-bottom-md"><nda-textarea formControlName="textareaReq" isRequired="true" label="Text Area" [errorMsg]="reqErrorMsg('textareaReq')"></nda-textarea></div>
+        <div class="m-bottom-md"><nda-textarea formControlName="textareaRows" [rows]="2" isRequired="true" label="Text Area" [errorMsg]="reqErrorMsg('textareaRows')"></nda-textarea></div>
+        <div class="m-bottom-md"><nda-textarea formControlName="textareaNoLabel" [rows]="8" placeholder="Large unvalidated textarea"></nda-textarea></div>
+    </form>
+</sg-control-wrapper>

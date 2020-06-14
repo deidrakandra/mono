@@ -1,0 +1,5 @@
+<div class="menu-container" [class.left]="left" [class.sticky]="sticky" [class.horizontal]="horizontal">
+    <ul>
+        <nda-menu-item *ngFor="let menuItem of menuItems" [menuItem]="menuItem" (activate)="selected($event)"></nda-menu-item>
+    </ul>
+</div>

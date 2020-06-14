@@ -1,0 +1,80 @@
+<div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-12">
+                <nda-input [errorMsg]="reqErrorMsg('textInputOne')" label="signin.username" placeholder="Required" isRequired="true" formControlName="textInputOne"></nda-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nda-input [errorMsg]="errorMsg('multiValidation')" label="Multi Validation Input" isRequired="true" formControlName="multiValidation"></nda-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nda-input [errorMsg]="errorMsg('emailInput')" label="Email" formControlName="emailInput"></nda-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nda-select [options]="options" label="Type" formControlName="select"></nda-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nda-select [options]="options" label="Type Two" formControlName="selectTwo"></nda-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <nda-input type="number" [errorMsg]="errorMsg('numberInput')" label="Number Input" formControlName="numberInput"></nda-input>
+            </div>
+            <div class="col-4">
+                <nda-datepicker label="Date" isRequired="true" [errorMsg]="errorMsg('date')" formControlName="date"></nda-datepicker>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nda-textarea label="Text Area" [rows]="3" formControlName="textArea"></nda-textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label class="input-label">Checkboxes</label>
+                <div>
+                    <input id="checkboxOne" type="checkbox" formControlName="checkboxOne">
+                    <label for="checkboxOne" class="checkbox-label">Checkbox One</label>
+                </div>
+                <div>
+                    <input id="checkboxTwo" type="checkbox" formControlName="checkboxTwo">
+                    <label for="checkboxTwo" class="checkbox-label">Checkbox Two</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <label class="input-label required">Radio Group</label>
+                <div>
+                    <input id="radioOne" type="radio" name="radio" value="radioOne" formControlName="radio">
+                    <label for="radioOne" class="radio-label">Radio One</label>
+                </div>
+                <div>
+                    <input id="radioTwo" type="radio" name="radio" value="radioTwo" formControlName="radio">
+                    <label for="radioTwo" class="radio-label">Radio Two</label>
+                </div>
+                <div>
+                    <input id="radioThree" type="radio" name="radio" value="radioThree" formControlName="radio">
+                    <label for="radioThree" class="radio-label">Radio Three</label>
+                </div>
+            </div>
+        </div>
+        <div class="center m-top-md m-bottom-md">
+            <button type="submit" class="outline-button" [disabled]="!form.valid">Submit</button>
+            <div *ngIf="form.valid" class="center small-font italic p-top-sm">Logs form values to console</div>
+        </div>
+    </form>
+    <div class="center">
+        <input #disableCheck id="disableInput" type="checkbox" (change)="toggleDisable(disableCheck.checked)">
+        <label for="disableInput" class="checkbox-label">Disable form controls</label>
+    </div>
+
+    <nda-form-inspector [form]="form"></nda-form-inspector>
+</div>

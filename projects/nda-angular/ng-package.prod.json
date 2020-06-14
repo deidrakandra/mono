@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/nda-angular",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "ngx-spinner",
+    "git-describe",
+    "fs-extra",
+    "ngx-mask",
+    "ngx-moment",
+    "moment"
+  ]
+}

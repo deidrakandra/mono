@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-5">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <ng-content></ng-content>
+            <div class="m-top-md m-bottom-md">
+                <button type="submit" class="outline-button" [disabled]="!form.valid">Submit</button>
+            </div>
+        </form>
+        <div>
+            <input #disableCheck id="disableInput" type="checkbox" (change)="toggleDisable(disableCheck.checked)">
+            <label for="disableInput" class="checkbox-label">Disable Datepicker Control</label>
+        </div>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-6">
+        <pre class="wrapped">{{ result | json }}</pre>
+    </div>
+</div>
+<nda-form-inspector [form]="form"></nda-form-inspector>

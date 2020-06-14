@@ -1,0 +1,22 @@
+@import "../../../../../nda-ui/scss/helpers/colors";
+
+.selected-collapsible {
+  font-weight: bold;
+  color: $color-primary-darker;
+}
+
+.collapsible-title {
+  font-weight: bold;
+
+  &:hover {
+    @extend .selected-collapsible;
+  }
+}
+
+.collapsible-content {
+  margin-left: 45px;
+}
+
+.row [class^=col] {
+  margin: .5rem 1%;
+}
